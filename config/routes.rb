@@ -1,7 +1,8 @@
 RailsClub::Application.routes.draw do
   get "home/index"
 
-  devise_for :members
+  devise_for :members, :controllers => { :registrations =>'registration'}
+  match 'dashboard' => 'home#dashboard'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
