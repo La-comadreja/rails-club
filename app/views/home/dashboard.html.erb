@@ -1,2 +1,7 @@
-<p>hi welcome to Ruby community. you have successfully registered to your rails club account</p>
-<%= link_to "Sign out", destroy_member_session_path, :method => :delete %>
+<% if member_signed_in? %>
+  <p>hi welcome to Ruby community. you have successfully registered to your rails club account</p>
+  <%= link_to "Sign out", destroy_member_session_path, :method => :delete %>
+<% else %>
+  <p>You are not signed in.</p>
+  <%= link_to "Sign In", member_session_path %>
+<% end %>
