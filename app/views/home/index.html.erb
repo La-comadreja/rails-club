@@ -2,6 +2,7 @@
 
 <h3>you have succesfully signed in</h3>
 <%= link_to "Sign Out", destroy_member_session_path, :method => :delete %>
+<%= link_to "View Dashboard", dashboard_path %>
 
 <% else %>
 
