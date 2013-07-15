@@ -1,4 +1,8 @@
 RailsClub::Application.routes.draw do
+  get "home/index"
+
+  devise_for :members
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
